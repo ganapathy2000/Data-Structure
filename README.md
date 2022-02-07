@@ -1,5 +1,5 @@
 # Data-Structure
-# Data-Structure
+// c pgm to singly linked list//<br>
 #include<iostream> <br>
 #include<cstdlib> <br>
 using namespace std; <br>
@@ -524,3 +524,4 @@ void single_llist::display() <br>
  cout<<endl; <br>
  } <br>
 }<br>
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
