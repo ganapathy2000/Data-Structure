@@ -524,4 +524,8 @@ void single_llist::display() <br>
  cout<<endl; <br>
  } <br>
 }<br>
+ Output:
+ 
+ 1-![image](https://user-images.githubusercontent.com/98145098/152732423-58977b5b-51b2-4e7e-a414-6f900bc6f68a.png)<br>
+ 
  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
