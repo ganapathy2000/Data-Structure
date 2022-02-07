@@ -526,9 +526,21 @@ void single_llist::display() <br>
 }<br>
  Output:
  
- 1-![image](https://user-images.githubusercontent.com/98145098/152732423-58977b5b-51b2-4e7e-a414-6f900bc6f68a.png)<br>
- 2-![image](https://user-images.githubusercontent.com/98145098/152732564-a144509e-22ca-43c6-82d1-eb12659f388d.png)<br>
- 3-![image](https://user-images.githubusercontent.com/98145098/152732696-8dc15628-ed86-4f9c-b90c-c71900e1f2cf.png)<br>
- 4-![image](https://user-images.githubusercontent.com/98145098/152732795-66d83149-9257-435a-9149-0f922f2d4f0c.png)<br>
+ 1-
+ ![image](https://user-images.githubusercontent.com/98145098/152732423-58977b5b-51b2-4e7e-a414-6f900bc6f68a.png)<br>
+ 2-
+ ![image](https://user-images.githubusercontent.com/98145098/152732564-a144509e-22ca-43c6-82d1-eb12659f388d.png)<br>
+ 3-
+ ![image](https://user-images.githubusercontent.com/98145098/152732696-8dc15628-ed86-4f9c-b90c-c71900e1f2cf.png)<br>
+ 4-
+ ![image](https://user-images.githubusercontent.com/98145098/152732795-66d83149-9257-435a-9149-0f922f2d4f0c.png)<br>
  5-
+ ![image](https://user-images.githubusercontent.com/98145098/152733082-4600662d-2110-4ac5-8525-f60fa73a5520.png)<br>
+ 6-
+ ![image](https://user-images.githubusercontent.com/98145098/152733148-083b7587-0d49-4418-8327-646555158ead.png)<br>
+ 7-
+ ![image](https://user-images.githubusercontent.com/98145098/152733255-73fb027e-9b88-44b3-9f6c-f55ddc208991.png)<br>
+ 8-
+![image](https://user-images.githubusercontent.com/98145098/152733399-c9e45dbe-282b-46cb-853c-db36ed43e2b3.png) <br>
+ 
  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
