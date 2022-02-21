@@ -638,4 +638,5 @@ return 0;<br>
 }<br>
 
  Output:<br> 
- 
+ ![image](https://user-images.githubusercontent.com/98145098/154900185-723d1f9a-cf41-41a2-a9bf-cbfaf5da0f48.png)
+
