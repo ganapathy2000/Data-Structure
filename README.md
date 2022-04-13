@@ -829,3 +829,5 @@ int main()
        }
     }
 }
+Output:
+ ![Screenshot 2022-04-13 155656](https://user-images.githubusercontent.com/98145098/163158875-f89c2efa-b9d7-408a-a09b-cb0a60139ea6.png)
