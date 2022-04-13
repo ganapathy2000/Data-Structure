@@ -832,3 +832,72 @@ int main()
 Output:
  ![Screenshot 2022-04-13 155656](https://user-images.githubusercontent.com/98145098/163158875-f89c2efa-b9d7-408a-a09b-cb0a60139ea6.png)
 ![1234](https://user-images.githubusercontent.com/98145098/163159366-5cfb07f2-9aac-4ecd-90e5-7f93ff47319b.png)
+ program to sort :
+ #include<iostream>
+using namespace std;
+void Merge(int *a, int low, int high, int mid) 
+{ 
+ int i, j, k, temp[high-low+1]; 
+ i = low; 
+ k = 0; 
+ j = mid + 1; 
+ while (i <= mid && j <= high) 
+ { 
+ if (a[i] < a[j]) 
+ { 
+ temp[k] = a[i]; 
+ k++; 
+ i++; 
+ } 
+ else 
+ { 
+ temp[k] = a[j]; 
+ k++; 
+ j++; 
+ } 
+ } 
+ while (i <= mid)
+ { 
+ temp[k] = a[i]; 
+ k++; 
+ i++; 
+ } 
+ while (j <= high) 
+ { 
+ temp[k] = a[j]; 
+ k++; 
+ j++; 
+ } 
+ for (i = low; i <= high; i++) 
+ { 
+ a[i] = temp[i-low]; 
+ } 
+} 
+void MergeSort(int *a, int low, int high) 
+{ 
+ int mid; 
+ if (low < high) 
+ { 
+ mid=(low+high)/2; 
+ MergeSort(a, low, mid); 
+ MergeSort(a, mid+1, high); 
+ Merge(a, low, high, mid); 
+ }
+ } 
+int main() 
+{ 
+ int n, i; 
+ cout<<"\nEnter the number of data element to be sorted: "; 
+ cin>>n; 
+ 
+ int arr[n]; 
+ for(i = 0; i < n; i++) 
+ { 
+ cout<<"Enter element "<<i+1<<": "; 
+ cin>>arr[i]; 
+ } 
+ MergeSort(arr, 0, n-1); 
+ cout<<"\nSorted Data "; 
+ for (i = 0; i < n; i++) 
+ cout<<"->"<<arr[i]; 
+}
