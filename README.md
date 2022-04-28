@@ -696,8 +696,8 @@ return 0;<br>
 }<br>
 
 	Output:<br>
-	![hashing 1](https://user-images.githubusercontent.com/98145090/165243181-738fc4f5-e62f-4ac1-bc5a-515d148be10f.png)<br>
-	![hashing 2](https://user-images.githubusercontent.com/98145090/165243206-cf5b029b-9b26-4e23-aeca-3745beee1ac4.png)<br>
+	![image](https://user-images.githubusercontent.com/98145098/165684131-dd3778a5-451b-4bcd-9a39-c056971e5a99.png)
+![image](https://user-images.githubusercontent.com/98145098/165684207-ced9dea2-a7b9-4d2f-8cc0-9b5064b7731f.png)
 
 
 <br>
