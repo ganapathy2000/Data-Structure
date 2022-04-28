@@ -1853,7 +1853,10 @@ return 0;<br>
 }<br>
 
  Output:<br>
+		    
+		    
 ![LINKll](https://user-images.githubusercontent.com/98145090/154898424-b4cdb703-b0ec-412a-92ec-245d8c714607.png)<br>
+		    
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
 5>>//Hashing//<br>
 	#include<iostream><br>
@@ -2053,6 +2056,8 @@ solveNQ();<br>
 return 0;<br>
 }<br>
 Output: ![image](https://user-images.githubusercontent.com/98145090/165240794-e5c709aa-8bf7-403a-a7fd-f751e0e76495.png)<br>
+		    
+		    
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
 	12>>//DFS//<br>
 	#include <bits/stdc++.h><br>
