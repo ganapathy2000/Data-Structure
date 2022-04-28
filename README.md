@@ -904,8 +904,7 @@ int main()
 OUTPUT:
 		    ![11111](https://user-images.githubusercontent.com/98145098/163168424-145081a9-0614-4701-83c5-30a78e130738.png)
 
-                    
-       program of hashing:             
+     program of hashing:             
    #include<iostream>
 #include<cstdlib>
 #include<string>
