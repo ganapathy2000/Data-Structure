@@ -1866,13 +1866,13 @@ return 0;
 using namespace std;
 struct node
 {
-	int info;
-	struct node*left;
-	struct node*right;
-}*root;
-class BST 
-{ 
- public: 
+	int info;<br>
+	struct node*left;<br>
+	struct node*right;<br>
+}*root;<br>
+class BST <br>
+{ <br>
+ public:<br> 
  void insert(node *, node *); 
  void inorder(node *); 
  void postorder(node *); 
@@ -1889,116 +1889,116 @@ int main()
  node *temp; 
  while (1) 
  { 
-cout<<"1.Insert Element "<<endl; 
- cout<<"2.Inorder Traversal"<<endl;  
- cout<<"3.Display"<<endl; 
- cout<<"4.Quit"<<endl; 
- cout<<"Enter your choice : "; 
- cin>>choice; 
- switch(choice) 
- { 
- case 1: 
- temp = new node; 
- cout<<"Enter the number to be inserted : "; 
- cin>>temp->info; 
- bst.insert(root, temp); 
- break;  
- case 2: 
- cout<<"Inorder Traversal of BST:"<<endl; 
- bst.inorder(root); 
- cout<<endl; 
- break; 
- case 3: 
- cout<<"Display BST:"<<endl; 
- bst.display(root,1); 
- cout<<endl; 
- break; 
- case 4: 
- exit(1); 
- default: 
- cout<<"Wrong choice"<<endl; 
- } 
- } 
-} 
-void BST::insert(node *tree, node *newnode) 
-{ 
- if (root == NULL) 
- { 
- root = new node; 
- root->info = newnode->info; 
- root->left = NULL; 
- root->right = NULL; 
- cout<<"Root Node is Added"<<endl; 
- return; 
- } 
- if (tree->info == newnode->info) 
- { 
- cout<<"Element already in the tree"<<endl; 
- return; 
- } 
- if (tree->info > newnode->info) 
-{ 
- if (tree->left != NULL) 
- { 
- insert(tree->left, newnode); 
- } 
- else 
- { 
- tree->left = newnode; 
- (tree->left)->left = NULL; 
- (tree->left)->right = NULL; 
- cout<<"Node Added To Left"<<endl; 
- return; 
- } 
- } 
- else 
- { 
- if (tree->right != NULL) 
- { 
- insert(tree->right, newnode); 
- } 
- else 
- { 
- tree->right = newnode; 
- (tree->right)->left = NULL; 
- (tree->right)->right = NULL; 
- cout<<"Node Added To Right"<<endl; 
- return; 
- } 
- } 
-} 
-void BST::inorder(node *ptr) 
-{ 
- if (root == NULL) 
- { 
- cout<<"Tree is empty"<<endl; 
- return; 
- } 
- if (ptr != NULL) 
- { 
- inorder(ptr->left); 
- cout<<ptr->info<<" "; 
- inorder(ptr->right); 
- } 
-} 
-void BST::display(node *ptr, int level) 
-{ 
- int i; 
- if (ptr != NULL) 
- { 
- display(ptr->right, level+1); 
- cout<<endl; 
- if (ptr == root) 
- cout<<"Root->: "; 
- else 
- { 
- for (i = 0;i < level;i++) 
- cout<<" "; 
- } 
- cout<<ptr->info; 
- display(ptr->left, level+1); 
- } 
-}
+cout<<"1.Insert Element "<<endl; <br>
+ cout<<"2.Inorder Traversal"<<endl;  <br>
+ cout<<"3.Display"<<endl; <br>
+ cout<<"4.Quit"<<endl; <br>
+ cout<<"Enter your choice : ";<br> 
+ cin>>choice; <br>
+ switch(choice) <br>
+ { <br>
+ case 1:<br> 
+ temp = new node;<br> 
+ cout<<"Enter the number to be inserted : ";<br> 
+ cin>>temp->info; <br>
+ bst.insert(root, temp);<br> 
+ break;  <br>
+ case 2: <br>
+ cout<<"Inorder Traversal of BST:"<<endl;<br> 
+ bst.inorder(root); <br>
+ cout<<endl; <br>
+ break; <br>
+ case 3: <br>
+ cout<<"Display BST:"<<endl;<br> 
+ bst.display(root,1); <br>
+ cout<<endl; <br>
+ break; <br>
+ case 4: <br>
+ exit(1); <br>
+ default: <br>
+ cout<<"Wrong choice"<<endl;<br> 
+ } <br>
+ } <br>
+} <br>
+void BST::insert(node *tree, node *newnode)<br> 
+{ <br>
+ if (root == NULL)<br> 
+ { <br>
+ root = new node;<br> 
+ root->info = newnode->info;<br> 
+ root->left = NULL; <br>
+ root->right = NULL; <br>
+ cout<<"Root Node is Added"<<endl;<br> 
+ return; <br>
+ } <br>
+ if (tree->info == newnode->info)<br> 
+ { <br>
+ cout<<"Element already in the tree"<<endl; <br>
+ return; <br>
+ } <br>
+ if (tree->info > newnode->info)<br> 
+{ <br>
+ if (tree->left != NULL) <br>
+ { <br>
+ insert(tree->left, newnode);<br> 
+ } <br>
+ else <br>
+ { <br>
+ tree->left = newnode;<br> 
+ (tree->left)->left = NULL;<br> 
+ (tree->left)->right = NULL; <br>
+ cout<<"Node Added To Left"<<endl;<br> 
+ return; <br>
+ } <br>
+ } <br>
+ else <br>
+ { <br>
+ if (tree->right != NULL)<br> 
+ { <br>
+ insert(tree->right, newnode); <br>
+ } <br>
+ else <br>
+ { <br>
+ tree->right = newnode; <br>
+ (tree->right)->left = NULL;<br> 
+ (tree->right)->right = NULL; <br>
+ cout<<"Node Added To Right"<<endl;<br> 
+ return; <br>
+ } <br>
+ } <br>
+} <br>
+void BST::inorder(node *ptr)<br> 
+{ <br>
+ if (root == NULL)<br> 
+ { <br>
+ cout<<"Tree is empty"<<endl;<br> 
+ return;<br> 
+ } <br>
+ if (ptr != NULL) <br>
+ { <br>
+ inorder(ptr->left); <br>
+ cout<<ptr->info<<" "; <br>
+ inorder(ptr->right);<br> 
+ } <br>
+} <br>
+void BST::display(node *ptr, int level)<br> 
+{ <br>
+ int i; <br>
+ if (ptr != NULL) <br>
+ { <br>
+ display(ptr->right, level+1);<br> 
+ cout<<endl; <br>
+ if (ptr == root) <br>
+ cout<<"Root->: ";<br> 
+ else <br>
+ { <br>
+ for (i = 0;i < level;i++)<br> 
+ cout<<" ";<br> 
+ } <br>
+ cout<<ptr->info; <br>
+ display(ptr->left, level+1);<br> 
+ } <br>
+}<br>
 
 7.Finding minimum and maximum from given unsorted array by using divide conquer method.
 #include <iostream>
