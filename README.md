@@ -1862,10 +1862,10 @@ return 0;
 
 
 6.Write a program to Insert into and Delete from a Binary Search Tree.
-#include<iostream>
-using namespace std;
-struct node
-{
+#include<iostream><br>
+using namespace std;<br>
+struct node<br>
+{<br>
 	int info;<br>
 	struct node*left;<br>
 	struct node*right;<br>
@@ -2001,66 +2001,66 @@ void BST::display(node *ptr, int level)<br>
 }<br>
 
 7.Finding minimum and maximum from given unsorted array by using divide conquer method.
-#include <iostream>
-using namespace std;
-void MinMax(int arr[], int low, int high, int &min, int &max)
-{
-if (low == high)
-{
-if (max < arr[low]) {           // comparison 1
-max = arr[low];
-}
+#include <iostream><br>
+using namespace std;<br>
+void MinMax(int arr[], int low, int high, int &min, int &max)<br>
+{<br>
+if (low == high)<br>
+{<br>
+if (max < arr[low])<br> {           // comparison 1
+max = arr[low];<br>
+}<br>
 
-if (min > arr[high]) {          // comparison 2
-min = arr[high];
-}
-return;
-}
-if (high - low == 1)
-{
-if (arr[low] < arr[high])
-{
-if (min > arr[low])
-{
-min = arr[low];
-}
-if (max < arr[high])
-{
-max = arr[high];
-}
-}
-else
-{
-if (min > arr[high])
-{
-min = arr[high];
-}
-if (max < arr[low])
-{
-max = arr[low];
-}
-}
-return;
-}
-int mid = (low + high) / 2;
-MinMax(arr, low, mid, min, max);
-MinMax(arr, mid + 1, high, min, max);
-}
-int main()
-{
-int i, n, arr[50];
-cout<<"Enter the number of elements : ";
-cin>>n;
-for( i = 0; i < n; i++ )
-{
-cout<<"Enter the element : ";
-cin>>arr[i];
-}
-int max = arr[0], min = arr[0];
-MinMax(arr, 0, n - 1, min, max);
-cout<<"The minimum array element is "<<min<<endl;
-cout<<"The maximum array element is "<<max;
-}
+if (min > arr[high]) <br>{          // comparison 2
+min = arr[high];<br>
+}<br>
+return;<br>
+}<br>
+if (high - low == 1)<br>
+{<br>
+if (arr[low] < arr[high])<br>
+{<br>
+if (min > arr[low])<br>
+{<br>
+min = arr[low];<br>
+}<br>
+if (max < arr[high])<br>
+{<br>
+max = arr[high];<br>
+}<br>
+}<br>
+else<br>
+{<br>
+if (min > arr[high])<br>
+{<br>
+min = arr[high];<br>
+}<br>
+if (max < arr[low])<br>
+{<br>
+max = arr[low];<br>
+}<br>
+}<br>
+return;<br>
+}<br>
+int mid = (low + high) / 2;<br>
+MinMax(arr, low, mid, min, max)<br>;
+MinMax(arr, mid + 1, high, min, max<br>);
+}<br>
+int main()<br>
+{<br>
+int i, n, arr[50];<br>
+cout<<"Enter the number of elements : ";<br>
+cin>>n;<br>
+for( i = 0; i < n; i++ )<br>
+{<br>
+cout<<"Enter the element : ";<br>
+cin>>arr[i];<br>
+}<br>
+int max = arr[0], min = arr[0];<br>
+MinMax(arr, 0, n - 1, min, max);<br>
+cout<<"The minimum array element is "<<min<<endl;<br>
+cout<<"The maximum array element is "<<max;<br>
+}<br>
 8.Create a program to merge sort using divide and conquer array.
 #include <iostream>
 using namespace std;
