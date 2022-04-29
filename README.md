@@ -1165,25 +1165,25 @@ Output:
 
 
 4.Find the subset of a given set S = {S1,S2,S3,………,Sn} OF ‘n’ positive integers whose sum is equal to a given positive integer d.
-#include<iostream>
-using namespace std;
-int s[10],d,n,set[10],count=0;
-void display(int);
-int flag = 0;
-int main()
-{
- int subset(int,int);
- int i;
-  cout<<"ENTER THE NUMBER OF THE ELEMENTS IN THE SET : ";
- cin>>n;
- cout<<"ENTER THE SET OF VALUES : ";
- for(i=0;i<n;i++)
-   cin>>s[i];
- cout<<"ENTER THE SUM : ";
- cin>>d;
- cout<<"THE PROGRAM OUTPUT IS: ";
- subset(0 , 0);
- if(flag == 0)
+#include<iostream><br>
+using namespace std;<br>
+int s[10],d,n,set[10],count=0;<br>
+void display(int);<br>
+int flag = 0;<br>
+int main()<br>
+{<br>
+ int subset(int,int);<br>
+ int i;<br>
+  cout<<"ENTER THE NUMBER OF THE ELEMENTS IN THE SET : ";<br>
+ cin>>n;<br>
+ cout<<"ENTER THE SET OF VALUES : ";<br>
+ for(i=0;i<n;i++)<br>
+   cin>>s[i];<br>
+ cout<<"ENTER THE SUM : ";<br>
+ cin>>d;<br>
+ cout<<"THE PROGRAM OUTPUT IS: ";<br>
+ subset(0 , 0);<br>
+ if(flag == 0)<br>
  cout<<"There is no solution";
  }
 int subset(int sum,int i)
