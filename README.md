@@ -1536,3 +1536,56 @@ void addEdge(int v, int w);<br>
     visited[s] = true;<br>
     queue.push_back(s);<br>
  // 'i' will be used to get all adja
+
+	
+	12.Write a program to implement Min Heap.<br>
+ #include<iostream><br>
+ #include <conio.h><br>
+ using namespace std; <br>
+void min_heap(int *a, int m, int n)<br>
+{<br>
+ int j, t; <br>
+t= a[m];<br>
+ j = 2 * m;<br>
+ while (j <= n)<br>
+ { <br>
+if (j < n && a[j+1] < a[j])<br>
+ j = j + 1;<br>
+ if (t < a[j]) <br>
+break;<br>
+ else <br>
+if (t >= a[j])<br>
+ {<br>
+ a[j/2] = a[j];<br>
+ j = 2 * j;<br>
+ } <br>
+}<br>
+ a[j/2] = t; <br>
+return;<br>
+ } void build_minheap(int *a, int n)<br>
+ {<br>
+ int k;<br>
+ for(k = n/2; k >= 1; k--)<br>
+ { <br>
+min_heap(a,k,n);<br>
+ }<br>
+ }<br>
+ int main()<br>
+ { <br>
+int n, i;<br>
+ cout<<"enter no of elements of array\n";<br>
+ cin>>n;<br>
+ int a[30]; <br>
+for (i = 1; i <= n; i++)<br>
+ {<br>
+ cout<<"enter element"<<" "<<(i)<<endl; <br>
+cin>>a[i]; <br>
+}<br>
+ build_minheap(a, n);<br>
+ cout<<"Min Heap\n";<br>
+ for (i = 1; i <= n; i++) <br>
+{ cout<<a[i]<<endl;<br>
+ }<br>
+ getch();<br>
+ }<br>
+Output:<br>
