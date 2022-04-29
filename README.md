@@ -886,7 +886,7 @@ Output:
 
 2.Write a C++ program to implement doubly linked list.
 #include<stdio.h>
-	#include<stdlib.h>
+	#include<stdlib.h><br>
 	struct node
 	{
 	struct node *prev;
