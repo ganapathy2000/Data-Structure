@@ -639,7 +639,7 @@ return 0;<br>
 ![LINKll](https://user-images.githubusercontent.com/98145090/154898424-b4cdb703-b0ec-412a-92ec-245d8c714607.png)<br>
 		    
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
-5>>//Hashing//<br>
+3>>//Hashing//<br>
 	#include<iostream><br>
 #include<limits.h><br>
 using namespace std;<br>
@@ -702,7 +702,7 @@ return 0;<br>
 
 <br>
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
-8>>//Merge sort//<br>
+4>>//Merge sort//<br>
  #include <iostream><br>
 #include<conio><br>
 void Merge(int *a, int low, int high, int mid)<br>
@@ -777,7 +777,7 @@ void main()<br>
 Output:
 ![image](https://user-images.githubusercontent.com/98145090/165239002-f3d23a3b-1584-4443-bc2f-e33309807e06.png)<br>
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
- 10>>//N Queen's problem//<br>
+ 5>>//N Queen's problem//<br>
 	#define N 8<br>
 #include <stdbool.h><br>
 #include <stdio.h><br>
@@ -840,7 +840,7 @@ Output: ![image](https://user-images.githubusercontent.com/98145090/165240794-e5
 		    
 		    
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
-	12>>//DFS//<br>
+	6>>//DFS//<br>
 	#include <bits/stdc++.h><br>
 using namespace std;<br>
 class Graph<br>
@@ -884,7 +884,7 @@ Output:
 <br>
 	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
 
-2.Write a C++ program to implement doubly linked list.
+7.Write a C++ program to implement doubly linked list.
 #include<stdio.h><br><br>
 	#include<stdlib.h><br><br>
 	struct node<br><br>
@@ -1164,7 +1164,7 @@ Output:
 	}
 
 
-4.Find the subset of a given set S = {S1,S2,S3,………,Sn} OF ‘n’ positive integers whose sum is equal to a given positive integer d.<br>
+8.Find the subset of a given set S = {S1,S2,S3,………,Sn} OF ‘n’ positive integers whose sum is equal to a given positive integer d.<br>
 #include<iostream><br>
 using namespace std;<br>
 int s[10],d,n,set[10],count=0;<br>
@@ -1215,7 +1215,7 @@ void display(int count)<br>
 }<br>
 
 
-6.Write a program to Insert into and Delete from a Binary Search Tree.
+9.Write a program to Insert into and Delete from a Binary Search Tree.
 #include<iostream><br>
 using namespace std;<br>
 struct node<br>
@@ -1354,7 +1354,7 @@ void BST::display(node *ptr, int level)<br>
  } <br>
 }<br>
 
-7.Finding minimum and maximum from given unsorted array by using divide conquer method.
+10.Finding minimum and maximum from given unsorted array by using divide conquer method.
 #include <iostream><br>
 using namespace std;<br>
 void MinMax(int arr[], int low, int high, int &min, int &max)<br>
@@ -1574,7 +1574,7 @@ cout << endl;
 return 0;
 }
 
-10.Write a program to implement breadth first search for undirected graph (BFS).<br>
+11.Write a program to implement breadth first search for undirected graph (BFS).<br>
 #include<iostream><br>
 #include <list><br>
  using namespace std;<br>
@@ -1586,32 +1586,32 @@ class Graph<br>
  
     // Pointer to an array containing adjacency
     // lists
-    list<int> *adj;  
-public:
-Graph(int V);  // Constructor
+    list<int> *adj;<br>  
+public:<br>
+Graph(int V);<br>  // Constructor
   // function to add an edge to graph
-void addEdge(int v, int w);
+void addEdge(int v, int w);<br>
   // prints BFS traversal from a given source s
-    void BFS(int s); 
-};
- Graph::Graph(int V)
-{
-    this->V = V;
-    adj = new list<int>[V];
-}
- void Graph::addEdge(int v, int w)
-{
-    adj[v].push_back(w); // Add w to v’s list.
-}
- void Graph::BFS(int s)
-{
-    // Mark all the vertices as not visited
-    bool *visited = new bool[V];
-    for(int i = 0; i < V; i++)
-        visited[i] = false;
+    void BFS(int s);<br> 
+};<br>
+ Graph::Graph(int V)<br>
+{<br>
+    this->V = V;<br>
+    adj = new list<int>[V];<br>
+}<br>
+ void Graph::addEdge(int v, int w)<br>
+{<br>
+    adj[v].push_back(w); // Add w to v’s list.<br>
+}<br>
+ void Graph::BFS(int s)<br>
+{<br>
+    // Mark all the vertices as not visited<br>
+    bool *visited = new bool[V];<br>
+    for(int i = 0; i < V; i++)<br>
+        visited[i] = false;<br>
   // Create a queue for BFS
-    list<int> queue;
+    list<int> queue;<br>
   // Mark the current node as visited and enqueue it
-    visited[s] = true;
-    queue.push_back(s);
+    visited[s] = true;<br>
+    queue.push_back(s);<br>
  // 'i' will be used to get all adja
