@@ -885,66 +885,66 @@ Output:
 	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
 
 2.Write a C++ program to implement doubly linked list.
-#include<stdio.h>
-	#include<stdlib.h><br>
-	struct node
+#include<stdio.h><br><br>
+	#include<stdlib.h><br><br>
+	struct node<br><br>
+	{<br><br>
+	struct node *prev;<br><br>
+	struct node *next;<br><br>
+	int data;<br><br>
+	};<br><br>
+	struct node *head;<br><br>
+	void insertion_beginning();<br><br>
+	void insertion_last();<br><br>
+	void insertion_specified();<br><br>
+	void deletion_beginning();<br><br>
+	void deletion_last();<br><br>
+	void deletion_specified();<br><br>
+	void display();<br><br>
+	void search();<br><br>
+	int main ()<br><br>
+	{<br><br>
+	int choice =0;<br><br>
+	while(choice != 9)<br><br>
 	{
-	struct node *prev;
-	struct node *next;
-	int data;
-	};
-	struct node *head;
-	void insertion_beginning();
-	void insertion_last();
-	void insertion_specified();
-	void deletion_beginning();
-	void deletion_last();
-	void deletion_specified();
-	void display();
-	void search();
-	int main ()
-	{
-	int choice =0;
-	while(choice != 9)
-	{
-	printf("\nChoose one option from the following list ...\n");
-	printf("\n1.Insert in begining\n2.Insert at last\n3.Insert at any random location\n4.Delete from Beginning\n5.Delete from last\n6.Delete the node after the given data\n7.Search\n8.Show\n9.Exit\n");
-	printf("\nEnter your choice?\n");
-	scanf("\n%d",&choice);
-	switch(choice)
-	{
-	case 1:
-	insertion_beginning();
-	break;
-	case 2:
-	insertion_last();
-	break;
-	case 3:
-	insertion_specified();
-	break;
-	case 4:
-	deletion_beginning();
-	break;
-	case 5:
-	deletion_last();
-	break;
-	case 6:
-	deletion_specified();
-	break;
-	case 7:
-	search();
-	break;
-	case 8:
-	display();
-	break;
-	case 9:
-	exit(0);
-	break;
-	default:
-	printf("Please enter valid choice..");
-	}
-	}
-	}
+	printf("\nChoose one option from the following list ...\n");<br><br>
+	printf("\n1.Insert in begining\n2.Insert at last\n3.Insert at any random location\n4.Delete from Beginning\n5.Delete from last\n6.Delete the node after the given data\n7.Search\n8.Show\n9.Exit\n");<br>
+	printf("\nEnter your choice?\n");<br>
+	scanf("\n%d",&choice);<br>
+	switch(choice)<br>
+	{<br>
+	case 1:<br>
+	insertion_beginning();<br>
+	break;<br>
+	case 2:<br>
+	insertion_last();<br>
+	break;<br>
+	case 3:<br>
+	insertion_specified();<br>
+	break;<br>
+	case 4:<br>
+	deletion_beginning();<br>
+	break;<br>
+	case 5:<br>
+	deletion_last();<br>
+	break;<br>
+	case 6:<br>
+	deletion_specified();<br>
+	break;<br>
+	case 7:<br>
+	search();<br>
+	break;<br>
+	case 8:<br>
+	display();<br>
+	break;<br>
+	case 9:<br>
+	exit(0);<br>
+	break;<br>
+	default:<br>
+	printf("Please enter valid choice..");<br>
+	}<br>
+	}<br>
+	}<br>
 	void insertion_beginning()
 	{
 	struct node *ptr;
