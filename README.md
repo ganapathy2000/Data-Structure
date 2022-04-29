@@ -1164,7 +1164,7 @@ Output:
 	}
 
 
-4.Find the subset of a given set S = {S1,S2,S3,………,Sn} OF ‘n’ positive integers whose sum is equal to a given positive integer d.
+4.Find the subset of a given set S = {S1,S2,S3,………,Sn} OF ‘n’ positive integers whose sum is equal to a given positive integer d.<br>
 #include<iostream><br>
 using namespace std;<br>
 int s[10],d,n,set[10],count=0;<br>
@@ -1184,35 +1184,35 @@ int main()<br>
  cout<<"THE PROGRAM OUTPUT IS: ";<br>
  subset(0 , 0);<br>
  if(flag == 0)<br>
- cout<<"There is no solution";
- }
-int subset(int sum,int i)
-{
-if(sum == d)
-{
- flag = 1;
- display(count);
- return 0;
-}
-if(sum>d || i>=n)
-return 1;
-else
-{
- set[count]=s[i];
- count++;
- subset(sum+s[i],i+1);
- count--;
- subset(sum,i+1);
-}
-}
-void display(int count)
-{
- int i;
- cout<<"\t{";
- for(i=0;i<count;i++)
- cout<<set[i];
- cout<<"}";
-}
+ cout<<"There is no solution";<br>
+ }<br>
+int subset(int sum,int i)<br>
+{<br><br><br>
+if(<br>sum == d)<br><br>
+{<br>
+ flag = 1;<br>
+ display(count);<br>
+ return 0;<br>
+}<br>
+if(sum>d || i>=n)<br>
+return 1;<br>
+else<br>
+{<br><br>
+ set[count]=s[i];<br>
+ count++;<br>
+ subset(sum+s[i],i+1);<br>
+ count--;<br>
+ subset(sum,i+1);<br>
+}<br>
+}<br>
+void display(int count)<br>
+{<br>
+ int i;<br>
+ cout<<"\t{";<br>
+ for(i=0;i<count;i++)<br>
+ cout<<set[i];<br>
+ cout<<"}";<br>
+}<br>
 
 
 6.Write a program to Insert into and Delete from a Binary Search Tree.
@@ -1574,15 +1574,15 @@ cout << endl;
 return 0;
 }
 
-10.Write a program to implement breadth first search for undirected graph (BFS).
-#include<iostream>
-#include <list>
- using namespace std;
- // This class represents a directed graph using
-// adjacency list representation
-class Graph
-{
-    int V;    // No. of vertices
+10.Write a program to implement breadth first search for undirected graph (BFS).<br>
+#include<iostream><br>
+#include <list><br>
+ using namespace std;<br>
+ // This class represents a directed graph using<br>
+// adjacency list representation<br>
+class Graph<br>
+{<br>
+    int V;    // No. of vertices<br>
  
     // Pointer to an array containing adjacency
     // lists
