@@ -1416,84 +1416,84 @@ cout<<"The minimum array element is "<<min<<endl;<br>
 cout<<"The maximum array element is "<<max;<br>
 }<br>
 
-9.Write a C++ program for solving the N-Queen’s Problem using backtracking.
-#include<iostream>
-using namespace std;
-int grid[10][10];
-//print the solution
-void print(int n) {
-for (int i = 0;i <= n-1; i++) {
-for (int j = 0;j <= n-1; j++) {
-cout <<grid[i][j]<< " ";
-}
-cout<<endl;
-}
-cout<<endl;
-cout<<endl;
-}
+9.Write a C++ program for solving the N-Queen’s Problem using backtracking.<br>
+#include<iostream><br>
+using namespace std;<br>
+int grid[10][10];<br>
+//print the solution<br>
+void print(int n) <br>{<br>
+for (int i = 0;i <= n-1; i++) <br>{<br>
+for (int j = 0;j <= n-1; j++) <br>{<br>
+cout <<grid[i][j]<< " ";<br>
+}<br>
+cout<<endl;<br>
+}<br>
+cout<<endl;<br>
+cout<<endl;<br>
+}<br>
 //function for check the position is safe or not
 //row is indicates the queen no. and col represents the possible positions
-bool isSafe(int col, int row, int n) {
-//check for same column
-for (int i = 0; i < row; i++) {
-if (grid[i][col]) {
-return false;
-}
-}
+bool isSafe(int col, int row, int n)<br> {<br>
+//check for same column<br>
+for (int i = 0; i < row; i++)<br> {<br>
+if (grid[i][col]) <br>{
+return false;<br>
+}<br>
+}<br>
 //check for upper left diagonal
-for (int i = row,j = col;i >= 0 && j >= 0; i--,j--) {
-if (grid[i][j]) {
-return false;
-}
-}
+for (int i = row,j = col;i >= 0 && j >= 0; i--,j--)<br> {
+if (grid[i][j]) <br>{<br>
+return false;<br>
+}<br>
+}<br>
 //check for upper right diagonal
-for (int i = row, j = col; i >= 0 && j < n; j++, i--) {
-if (grid[i][j]) {
-return false;
-}
-}
-return true;
-}
+for (int i = row, j = col; i >= 0 && j < n; j++, i--)<br> {
+if (grid[i][j]) <br>{<br>
+return false;<br>
+}<br>
+}<br>
+return true;<br>
+}<br>
 //function to find the position for each queen
 //row is indicates the queen no. and col represents the possible positions
-bool solve (int n, int row) {
-if (n == row) {
-print(n);
-return true;
-}
+bool solve (int n, int row) <br>{<br>
+if (n == row) <br>{<br>
+print(n);<br>
+return true;<br>
+}<br>
 //variable res is use for possible backtracking
-bool res = false;
-for (int i = 0;i <=n-1;i++) {
-if (isSafe(i, row, n)) {
-grid[row][i] = 1;
+bool res = false;<br>
+for (int i = 0;i <=n-1;i++)<br> {<br>
+if (isSafe(i, row, n)) <br>{
+grid[row][i] = 1;<br>
 //recursive call solve(n, row+1) for next queen (row+1)
-res = solve(n, row+1) || res;//if res ==false then backtracking will occur
+res = solve(n, row+1) || res;//if res ==false then backtracking will occur<br>
 //by assigning the grid[row][i] = 0
-grid[row][i] = 0;
-}
-}
-return res;
-}
-int main()
-{
-ios_base::sync_with_stdio(false);
-cin.tie(NULL);
-int n;
-cout<<"Enter the number of queen"<<endl;
-cin >> n;
-for (int i = 0;i < n;i++) {
-for (int j = 0;j < n;j++) {
-grid[i][j] = 0;
-}
-}
-bool res = solve(n, 0);
-if(res == false) {
+grid[row][i] = 0;<br>
+}<br>
+}<br>
+return res;<br>
+}<br>
+int main()<br>
+{<br>
+ios_base::sync_with_stdio(false);<br>
+cin.tie(NULL);<br>
+int n;<br>
+cout<<"Enter the number of queen"<<endl;<br>
+cin >> n;<br>
+for (int i = 0;i < n;i++) <br>{
+for (int j = 0;j < n;j++) <br>{
+grid[i][j] = 0;<br>
+}<br>
+}<br>
+bool res = solve(n, 0);<br>
+if(res == false)<br> {<br>
 cout << -1 << endl; //if there is no possible solution
-} else {
-cout << endl;
-}
-return 0;
-}
+}<br> else<br> {<br>
+cout << endl;<br>
+}<br>
+return 0;<br>
+}<br>
 
 11.Write a program to implement breadth first search for undirected graph (BFS).<br>
 #include<iostream><br>
