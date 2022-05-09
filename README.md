@@ -1589,3 +1589,65 @@ cin>>a[i]; <br>
  getch();<br>
  }<br>
 Output:<br>
+
+
+	
+13.Write a program to implement Max Heap Sort.<br>
+#include <iostream><br><br>
+using namespace std;<br>
+void MaxHeapify (int a[], int i, int n)<br>
+{<br>
+int j, temp;<br>
+temp = a[i];<br>
+j = 2*i;<br>
+while (j <= n)<br>
+{<br>
+if (j < n && a[j+1] > a[j])<br>
+j = j+1;<br>
+if (temp > a[j])<br>
+break;<br>
+else if (temp <= a[j])<br>
+{<br>
+a[j/2] = a[j];<br>
+j = 2*j;<br>
+}<br>
+}<br>
+a[j/2] = temp;<br>
+return;<br>
+}<br>
+void HeapSort(int a[], int n)<br>
+{<br>
+int i, temp;<br>
+for (i = n; i >= 2; i--)<br>
+{<br>
+temp = a[i];<br>
+a[i] = a[1];<br>
+a[1] = temp;<br>
+MaxHeapify(a, 1, i - 1);<br>
+}<br>
+}
+void Build_MaxHeap(int a[], int n)<br>
+{<br>
+int i;<br>
+for(i = n/2; i >= 1; i--)<br>
+MaxHeapify(a, i, n);<br>
+}<br>
+int main()<br>
+{<br>
+int n, i,arr[100];<br>
+cout<<"\nEnter the number of data element to be sorted: ";<br>
+cin>>n;<br>
+n++;<br>
+for(i=1;i<n;i++)<br>
+{<br>
+cout<<"Enter element"<<i<<":";<br>
+cin>>arr[i];<br>
+}<br>
+Build_MaxHeap(arr, n-1);<br>
+HeapSort(arr, n-1);<br>
+cout<<"\nSorted Data ";<br>
+for (i = 1; i < n; i++)<br>
+cout<<" "<<arr[i];<br>
+return 0;<br>
+}<br>
+	
