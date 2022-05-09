@@ -1650,4 +1650,187 @@ for (i = 1; i < n; i++)<br>
 cout<<" "<<arr[i];<br>
 return 0;<br>
 }<br>
+Output:
 	
+
+	
+	
+14.Write a program to insert into an AVL tree and deletion from an AVL tree	
+#include<iostream><br>
+#include<cstdio><br>
+#include<sstream><br>
+#include<algorithm><br>
+#define pow2(n) (1 << (n))<br>
+using namespace std;<br>
+struct avl <br>{<br>
+   int d;<br>
+   struct avl *l;<br>
+   struct avl *r;<br>
+}*r;<br>
+class avl_tree {<br>
+   public:<br>
+      int height(avl *);<br>
+      int difference(avl *);<br>
+      avl *rr_rotat(avl *);<br>
+      avl *ll_rotat(avl *);<br>
+      avl *lr_rotat(avl*);<br>
+      avl *rl_rotat(avl *);<br>
+      avl * balance(avl *);<br>
+      avl * insert(avl*, int);<br>
+      void show(avl*, int);<br>
+      void inorder(avl *);<br>
+      void preorder(avl *);<br>
+      void postorder(avl*);<br>
+      avl_tree() <br>{<br>
+         r = NULL;<br>
+      }<br>
+};<br>
+int avl_tree::height(avl *t)<br> {<br>
+   int h = 0;<br>
+   if (t != NULL)<br> {<br>
+      int l_height = height(t->l);<br>
+      int r_height = height(t->r);<br>
+      int max_height = max(l_height, r_height);<br>
+      h = max_height + 1;<br>
+   }<br>
+   return h;<br>
+}<br>
+int avl_tree::difference(avl *t)<br> {<br>
+   int l_height = height(t->l);<br>
+   int r_height = height(t->r);<br>
+   int b_factor = l_height - r_height;<br>
+   return b_factor;<br>
+}
+avl *avl_tree::rr_rotat(avl *parent)<br> {<br>
+   avl *t;<br>
+   t = parent->r;<br>
+   parent->r = t->l;<br><br>
+   t->l = parent;<br>
+   cout<<"Right-Right Rotation";<br>
+   return t;<br>
+}<br>
+avl *avl_tree::ll_rotat(avl *parent) <br>{<br>
+   avl *t;<br>
+   t = parent->l;<br>
+   parent->l = t->r;<br>
+   t->r = parent;<br>
+   cout<<"Left-Left Rotation";<br>
+   return t;<br>
+}<br>
+avl *avl_tree::lr_rotat(avl *parent)<br>{<br>
+   avl *t;<br>
+   t = parent->l;<br>
+   parent->l = rr_rotat(t);<br>
+   cout<<"Left-Right Rotation";<br>
+   return ll_rotat(parent);<br>
+}<br>
+avl *avl_tree::rl_rotat(avl *parent) {<br>
+   avl *t;<br>
+   t = parent->r;<br>
+   parent->r = ll_rotat(t);<br>
+   cout<<"Right-Left Rotation";<br>
+   return rr_rotat(parent);<br>
+}<br>
+avl *avl_tree::balance(avl *t)<br> {<br>
+   int bal_factor = difference(t);<br>
+   if (bal_factor > 1) {<br>
+      if (difference(t->l) > 0)<br>
+         t = ll_rotat(t);<br>
+      else<br>
+         t = lr_rotat(t);<br>
+   } else if (bal_factor < -1) <br>{<br>
+      if (difference(t->r) > 0)<br>
+         t = rl_rotat(t);<br>
+      else<br>
+         t = rr_rotat(t);<br>
+   }<br>
+   return t;<br>
+}<br>
+avl *avl_tree::insert(avl *r, int v)<br> {<br>
+   if (r == NULL) <br>{<br>
+      r = new avl;<br>
+      r->d = v;<br>
+      r->l = NULL;<br>
+      r->r = NULL;<br>
+      return r;<br>
+   } else if (v< r->d)<br> {<br>
+      r->l = insert(r->l, v);<br>
+      r = balance(r);<br>
+   } else if (v >= r->d) <br>{<br>
+      r->r = insert(r->r, v);<br>
+      r = balance(r);<br>
+   } return r;<br>
+}<br>
+void avl_tree::show(avl *p, int l)<br> {<br>
+   int i;<br>
+   if (p != NULL)<br> {<br>
+      show(p->r, l+ 1);<br>
+      cout<<" ";<br>
+      if (p == r)<br>
+         cout << "Root -> ";<br>
+      for (i = 0; i < l&& p != r; i++)<br>
+         cout << " ";<br>
+         cout << p->d;<br>
+         show(p->l, l + 1);<br>
+   }<br>
+}
+void avl_tree::inorder(avl *t) <br>{<br>
+   if (t == NULL)<br>
+      return;<br>
+      inorder(t->l);<br>
+      cout << t->d << " ";<br>
+      inorder(t->r);<br>
+}
+void avl_tree::preorder(avl *t)<br> {<br>
+   if (t == NULL)<br>
+      return;<br>
+      cout << t->d << " ";<br>
+      preorder(t->l);<br>
+      preorder(t->r);<br>
+}<br>
+void avl_tree::postorder(avl *t)<br> {<br>
+   if (t == NULL)<br>
+      return;<br>
+      postorder(t ->l);<br>
+      postorder(t ->r);<br>
+      cout << t->d << " ";<br>
+}<br>
+int main() {<br>
+   int c, i;<br>
+   avl_tree avl;<br>
+   while (1) {<br>
+<br>
+         break;<br>
+         case 2:<br>
+            if (r == NULL)<br> {
+               cout << "Tree is Empty" << endl;<br>
+               continue;<br>
+            }<br>
+            cout << "Balanced AVL Tree:" << endl;<br>
+            avl.show(r, 1);<br>
+            cout<<endl;<br>
+         break;<br>
+         case 3:<br>
+            cout << "Inorder Traversal:" << endl;<br>
+            avl.inorder(r);<br>
+            cout << endl;<br>
+         break;<br>
+         case 4:<br>
+            cout << "Preorder Traversal:" << endl;<br>
+            avl.preorder(r);<br>
+            cout << endl;<br>
+         break;<br>
+         case 5:<br>
+            cout << "Postorder Traversal:" << endl;<br>
+            avl.postorder(r);<br>
+            cout << endl;<br>
+         break;<br>
+         case 6:<br>
+            exit(1);<br>
+         break;<br>
+         default:<br>
+            cout << "Wrong Choice" << endl;<br>
+      }<br>
+   }<br>
+   return 0;<br>
+}<br>
